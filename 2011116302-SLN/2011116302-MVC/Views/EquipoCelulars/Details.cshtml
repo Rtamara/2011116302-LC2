@@ -1,0 +1,75 @@
+﻿@model _2011116302_ENT.Entityes.EquipoCelular
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EquipoCelular</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AdministradorEquipo.Modalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdministradorEquipo.Modalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarcaEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarcaEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModeloEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModeloEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imei)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imei)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadEquipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EquipoCelularId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

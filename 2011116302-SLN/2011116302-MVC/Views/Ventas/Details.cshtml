@@ -1,0 +1,91 @@
+﻿@model _2011116302_ENT.Entityes.Venta
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Venta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CentroAtencion.NombreCeAtencion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CentroAtencion.NombreCeAtencion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.NombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.NombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evaluacion.Documento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evaluacion.Documento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineaTelefonica.numeroTelefonico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineaTelefonica.numeroTelefonico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroVenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModalidadVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModalidadVenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoVenta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VentaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<_2011116302_ENT.Entityes.Evaluacion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Plan.TopeConsumo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Trabajador.NombreTrabajador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEvaluacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plan.TopeConsumo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trabajador.NombreTrabajador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoEvaluacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEvaluacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEvaluacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EvaluacionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EvaluacionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EvaluacionId })
+        </td>
+    </tr>
+}
+
+</table>

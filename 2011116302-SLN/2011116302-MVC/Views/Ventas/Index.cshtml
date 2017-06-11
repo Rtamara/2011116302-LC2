@@ -1,0 +1,82 @@
+﻿@model IEnumerable<_2011116302_ENT.Entityes.Venta>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CentroAtencion.NombreCeAtencion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.NombreCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evaluacion.Documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineaTelefonica.numeroTelefonico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroVenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModalidadVenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoVenta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CentroAtencion.NombreCeAtencion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.NombreCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evaluacion.Documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LineaTelefonica.numeroTelefonico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroVenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModalidadVenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoVenta)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VentaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VentaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VentaId })
+        </td>
+    </tr>
+}
+
+</table>

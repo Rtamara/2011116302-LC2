@@ -1,0 +1,75 @@
+﻿@model _2011116302_ENT.Entityes.Cliente
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApePaternoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApePaternoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApeMaternoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApeMaternoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DniCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DniCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecNacimientoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecNacimientoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SueldoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SueldoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorreoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoCliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,59 @@
+﻿@model _2011116302_ENT.Entityes.Plan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Plan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoPlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TopeConsumo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TopeConsumo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CargoFijo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoFijo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaracteristicaPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaracteristicaPlan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlanId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

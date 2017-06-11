@@ -1,0 +1,81 @@
+﻿@model _2011116302_ENT.Entityes.Cliente
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApePaternoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApePaternoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApeMaternoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApeMaternoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DniCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DniCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecNacimientoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecNacimientoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SueldoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SueldoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorreoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoCliente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

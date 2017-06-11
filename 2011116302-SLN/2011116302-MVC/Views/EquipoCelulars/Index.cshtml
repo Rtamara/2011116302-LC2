@@ -1,0 +1,70 @@
+﻿@model IEnumerable<_2011116302_ENT.Entityes.EquipoCelular>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdministradorEquipo.Modalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MarcaEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModeloEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imei)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ColorEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadEquipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdministradorEquipo.Modalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MarcaEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModeloEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imei)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColorEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadEquipo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EquipoCelularId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EquipoCelularId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EquipoCelularId })
+        </td>
+    </tr>
+}
+
+</table>

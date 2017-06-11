@@ -1,0 +1,52 @@
+﻿@model IEnumerable<_2011116302_ENT.Entityes.Contrato>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Venta.ModalidadVenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlazoContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormaContrato)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venta.ModalidadVenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlazoContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormaContrato)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContratoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContratoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContratoId })
+        </td>
+    </tr>
+}
+
+</table>

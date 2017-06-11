@@ -1,0 +1,59 @@
+﻿@model _2011116302_ENT.Entityes.Trabajador
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Trabajador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApellidoPaTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApellidoPaTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApellidoMaTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApellidoMaTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DniTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DniTrabajador)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TrabajadorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
