@@ -1,6 +1,7 @@
 ﻿using _2011116302_ENT;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,13 @@ namespace _2011116302_PER.EntitiesConfiguration
         {
             ToTable("CentroAtencion");
             HasKey(ca => ca.CentroAtencionId);
+
+            Property(ca => ca.NombreCeAtencion).HasMaxLength(60).HasColumnType("Varchar");
+
+            Property(ca => ca.CentroAtencionId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            //HasRequired(dr => dr.Direccion).WithRequiredPrincipal(ca => ca.CentroAtencion);
         }
     }
 }

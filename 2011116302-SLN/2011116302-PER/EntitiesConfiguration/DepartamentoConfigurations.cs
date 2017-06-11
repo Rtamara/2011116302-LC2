@@ -1,6 +1,7 @@
 ﻿using _2011116302_ENT;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,14 @@ namespace _2011116302_PER.EntitiesConfiguration
         {
             ToTable("Departamento");
             HasKey(dp => dp.DepartamentoId);
+
+            Property(dp => dp.CodigoDepartamento).HasMaxLength(2).HasColumnType("Varchar");
+            Property(dp => dp.NombreDepartamento)
+               .HasMaxLength(60)
+               .HasColumnType("Varchar");
+
+            Property(dp => dp.DepartamentoId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
         }
     }
 }

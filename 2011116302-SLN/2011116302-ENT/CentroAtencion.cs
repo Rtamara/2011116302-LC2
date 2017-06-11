@@ -10,26 +10,21 @@ namespace _2011116302_ENT
     {
         public int CentroAtencionId { get; set; }
 
-        private List<Direccion> _Direccion;
-        int _codCentroAtencion;
-        String _nomCentroAtencion;
-        public CentroAtencion(int codDireccion, int codCentroAtencion, String nomCentroAtencion)
+        String _nombreCeAtencion;
+        public Direccion _Direccion { get; set; }
+        public int DireccionId { get; set; }
+        public CentroAtencion()
         {
-            _Direccion = new List<Direccion>(codDireccion);
-
-            _codCentroAtencion = codCentroAtencion;
-            _nomCentroAtencion = nomCentroAtencion;
+            _Direccion = new Direccion();
         }
-        public int CodigoCentroAtencion
+        public CentroAtencion(String nombreCeAtencion)
         {
-            get { return _codCentroAtencion; }
-            set { _codCentroAtencion = value; }
+            NombreCeAtencion = nombreCeAtencion;
         }
-        public String NombreCentroAtencion
+        public String NombreCeAtencion
         {
-            get { return _nomCentroAtencion; }
-            set { _nomCentroAtencion = value; }
+            get { return _nombreCeAtencion; }
+            set { _nombreCeAtencion = value; }
         }
-        public int CodDireccion { get; set; }
     }
 }

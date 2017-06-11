@@ -10,15 +10,19 @@ namespace _2011116302_ENT
     {
         public int DistritoId { get; set; }
 
-        int _codigoDistrito;
+        String _codigoDistrito;
         String _nombreDistrito;
 
-        public Distrito(int codigoDistrito, String nombreDistrito)
+        public Distrito()
+        {
+            Provincia = new Provincia();
+        }
+        public Distrito(String codigoDistrito, String nombreDistrito)
         {
             _codigoDistrito = codigoDistrito;
             _nombreDistrito = nombreDistrito;
         }
-        public int CodigoDistrito
+        public String CodigoDistrito
         {
             get { return _codigoDistrito; }
             set { _codigoDistrito = value; }
@@ -28,5 +32,8 @@ namespace _2011116302_ENT
             get { return _nombreDistrito; }
             set { _nombreDistrito = value; }
         }
+
+        public Provincia Provincia { get; set; }
+        public int ProvinciaId { get; set; }
     }
 }

@@ -10,26 +10,22 @@ namespace _2011116302_ENT
     {
         public int DireccionId { get; set; }
 
-        private List<Ubigeo> _Ubigeo;
-        int _codDireccion;
-        String _nomDireccion;
-        public Direccion(int codUbigeo, int codDireccion, String nomDireccion)
-        {
-            _Ubigeo = new List<Ubigeo>(codUbigeo);
+        String _descripcionDireccion;
 
-            _codDireccion = codDireccion;
-            _nomDireccion = nomDireccion;
-        }
-        public int CodigoDireccion
+        public Ubigeo _Ubigeo { get; set; }
+        public int UbigeoId { get; set; }
+        public Direccion()
         {
-            get { return _codDireccion; }
-            set { _codDireccion = value; }
+            _Ubigeo = new Ubigeo();
         }
-        public String NombreDireccion
+        public Direccion(String descripcionDireccion)
         {
-            get { return _nomDireccion; }
-            set { _nomDireccion = value; }
+            DescripcionDireccion = descripcionDireccion;
         }
-        public int CodigoUbigeo { get; set; }
+        public String DescripcionDireccion
+        {
+            get { return _descripcionDireccion; }
+            set { _descripcionDireccion = value; }
+        }
     }
 }

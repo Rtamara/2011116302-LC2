@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6A52A671-D116-4F9E-BC34-9902A8BD26BC}</ProjectGuid>
+    <ProjectGuid>{DF9727E4-9D8B-4CA6-9EB3-3C2D5FC7C503}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_2011116302_PER</RootNamespace>
@@ -32,11 +32,9 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -45,32 +43,27 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="2011116302DbContext.cs" />
-    <Compile Include="EntitiesConfiguration\AdministradorEquipoConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\AdministradorLineaConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\CentroAtencionConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\ClienteConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\ContratoConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\DepartamentoConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\DireccionConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\DistritoConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\EquipoCelularConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\EstadoEvaluacionConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\EvaluacionConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\LineaTelefonicaConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\PlanConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\ProvinciaConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\TipoEvaluacionConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\TipoLineaConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\TipoPagoConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\TipoPlanConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\TipoTrabajadorConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\TrabajadorComfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\UbigeoConfigurations.cs" />
-    <Compile Include="EntitiesConfiguration\VentaConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\AdministradorEquipoConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\AdministradorLineaConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\CentroAtencionConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\ClienteConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\ContratoConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\DepartamentoConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\DireccionConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\DistritoConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\EquipoCelularConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\EvaluacionConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\LineaTelefonicaConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\PlanConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\ProvinciaConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\TrabajadorConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\UbigeoConfigurations.cs" />
+    <Compile Include="EntitiesConfiguracion\VentaConfigurations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdministradorEquipoRepository.cs" />
     <Compile Include="Repositories\AdministradorLineaRepository.cs" />
@@ -81,20 +74,14 @@
     <Compile Include="Repositories\DireccionRepository.cs" />
     <Compile Include="Repositories\DistritoRepository.cs" />
     <Compile Include="Repositories\EquipoCelularRepository.cs" />
-    <Compile Include="Repositories\EstadoEvaluacionRepository.cs" />
     <Compile Include="Repositories\EvaluacionRepository.cs" />
-    <Compile Include="Repositories\ITipoEvaluaciónRepository.cs" />
     <Compile Include="Repositories\LineaTelefonicaRepository.cs" />
     <Compile Include="Repositories\PlanRepository.cs" />
     <Compile Include="Repositories\ProvinciaRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
-    <Compile Include="Repositories\TipoEvaluaciónRepository.cs" />
-    <Compile Include="Repositories\TipoLineaRepository.cs" />
-    <Compile Include="Repositories\TipoPagoRepository.cs" />
-    <Compile Include="Repositories\TipoPlanRepository.cs" />
-    <Compile Include="Repositories\TipoTrabajadorRepository.cs" />
     <Compile Include="Repositories\TrabajadorRepository.cs" />
     <Compile Include="Repositories\UbigeoRepository.cs" />
+    <Compile Include="Repositories\UnityOfWork.cs" />
     <Compile Include="Repositories\VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,16 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\2011116302-ENT\2011116302-ENT.csproj">
-      <Project>{7a518275-9b44-4bc4-8639-08457359e3d0}</Project>
+      <Project>{3ad04177-ee85-411e-9fdf-9e4be1128a0b}</Project>
       <Name>2011116302-ENT</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

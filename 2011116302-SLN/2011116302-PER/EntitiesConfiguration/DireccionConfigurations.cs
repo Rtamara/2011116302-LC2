@@ -1,6 +1,7 @@
 ﻿using _2011116302_ENT;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,13 @@ namespace _2011116302_PER.EntitiesConfiguration
         {
             ToTable("Direccion");
             HasKey(dr => dr.DireccionId);
+
+            Property(dr => dr.DescripcionDireccion).HasMaxLength(60).HasColumnType("Varchar");
+
+            Property(dr => dr.DireccionId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            //HasRequired(ug => ug.Ubigeo).WithMany(dr => dr.Direccion);//.HasForeignKey(dr => dr.UbigeoId);
         }
     }
 }

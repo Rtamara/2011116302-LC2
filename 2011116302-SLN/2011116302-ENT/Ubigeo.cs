@@ -8,39 +8,18 @@ namespace _2011116302_ENT
 {
     public class Ubigeo
     {
-    public int UbigeoId { get; set; }
+        public int UbigeoId { get; set; }
 
-        private List<Departamento> _Departamento;
-        private List<Provincia> _Provincia;
-        private List<Distrito> _Distrito;
+        private Departamento Departamento { get; set; }
+        private Provincia Provincia { get; set; }
+        private Distrito Distrito { get; set; }
+        private int DistritoId { get; set; }
 
-        int _codUbigeo;
-        public int CodigoUbigeo
+        String _codUbigeo;
+        public String CodigoUbigeo
         {
             get { return _codUbigeo; }
             set { _codUbigeo = value; }
-        }
-        public List<Departamento> Departamento
-        {
-            get { return _Departamento; }
-            set { _Departamento = value; }
-        }
-        public List<Provincia> Provincia
-        {
-            get { return _Provincia; }
-            set { _Provincia = value; }
-        }
-        public List<Distrito> Distrito
-        {
-            get { return _Distrito; }
-            set { _Distrito = value; }
-        }
-        public Ubigeo(int codUbigeo, List<Departamento> departamento, List<Provincia> provincia, List<Distrito> distrito)
-        {
-            CodigoUbigeo = codUbigeo;
-            Departamento = departamento;
-            Provincia = provincia;
-            Distrito = distrito;
         }
     }
 }

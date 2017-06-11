@@ -10,26 +10,26 @@ namespace _2011116302_ENT
     {
         public int DepartamentoId { get; set; }
 
-        private List<Provincia> _Provincia;
-        int _codDepartamento;
-        String _nomDepartamento;
-        public Departamento(int codProvincia, int codDepartamento, String nomDepartamento)
+        String _codigoDepartamento;
+        String _nombreDepartamento;
+        public Departamento()
         {
-            _codDepartamento = codDepartamento;
-            _nomDepartamento = nomDepartamento;
 
-            _Provincia = new List<Provincia>(codProvincia);
         }
-        public int CodigoDepartamento
+        public Departamento(String codigoDepartamento, String nombreDepartamento)
         {
-            get { return _codDepartamento; }
-            set { _codDepartamento = value; }
+            _codigoDepartamento = codigoDepartamento;
+            _nombreDepartamento = nombreDepartamento;
+        }
+        public String CodigoDepartamento
+        {
+            get { return _codigoDepartamento; }
+            set { _codigoDepartamento = value; }
         }
         public String NombreDepartamento
         {
-            get { return _nomDepartamento; }
-            set { _nomDepartamento = value; }
+            get { return _nombreDepartamento; }
+            set { _nombreDepartamento = value; }
         }
-        public Provincia CodProvincia { get; set; }
     }
 }

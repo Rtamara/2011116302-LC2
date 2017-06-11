@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2011116302_ENT.Enumerables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,59 +11,54 @@ namespace _2011116302_ENT
     {
         public int EvaluacionId { get; set; }
 
-        int _NumDocumento;
-        String _TipoDocumento;
-        String _FecNacimiento;
+        int _NumeroDocumento;
+        String _Documento;
+        String _FechaEvaluacion;
 
-        private EstadoEvaluacion _EstadoEvaluacion;
-        private TipoEvaluacion _TipoEvaluacion;
-        private List<Cliente> _Cliente;
-        private List<Plan> _Plan;
-        private List<EquipoCelular> _EquipoCelular;
-        private List<LineaTelefonica> _LineaTelefonica;
+        public EstadoEvaluacion EstadoEvaluacion { get; set; }
+        public TipoEvaluacion TipoEvaluacion { get; set; }
+        public EquipoCelular EquipoCelular { get; set; }
+        public Cliente Cliente { get; set; }
+        private int ClienteId { get; set; }
+        public Plan Plan { get; set; }
+        public int PlanId { get; set; }
+        public CentroAtencion CentroAtencion { get; set; }
+        private int CentroAtencionId { get; set; }
+        public Trabajador Trabajador { get; set; }
+        public int TrabajadorId { get; set; }
+        public LineaTelefonica LineaTelefonica { get; set; }
+        private int LineaTelefonicaId { get; set; }
+
         public Evaluacion()
         {
-            _EstadoEvaluacion = new EstadoEvaluacion();
-            _TipoEvaluacion = new TipoEvaluacion();
-            _EquipoCelular = new List<EquipoCelular>();
+            EquipoCelular = new EquipoCelular();
+            EstadoEvaluacion = new EstadoEvaluacion();
+            TipoEvaluacion = new TipoEvaluacion();
         }
-        public Evaluacion(int numDocumento, String tipoDocumento, String fecNacimiento, List<Cliente> cliente, List<Plan> plan, List<LineaTelefonica> lineaTelefonica)
+        public Evaluacion(int numDocumento, String documento, String fecEvaluacion, Cliente cliente, Plan plan, LineaTelefonica lineaTelefonica, CentroAtencion centroAtencion, Trabajador trabajador)
         {
             NumeroDocumento = numDocumento;
-            TipoDocumento = tipoDocumento;
-            FecNacimiento = fecNacimiento;
+            Documento = documento;
+            FechaEvaluacion = fecEvaluacion;
             Cliente = cliente;
             Plan = plan;
-        }
-        public String TipoDocumento
-        {
-            get { return _TipoDocumento; }
-            set { _TipoDocumento = value; }
-        }
-        public String FecNacimiento
-        {
-            get { return _FecNacimiento; }
-            set { _FecNacimiento = value; }
+            CentroAtencion = centroAtencion;
+            Trabajador = trabajador;
         }
         public int NumeroDocumento
         {
-            get { return _NumDocumento; }
-            set { _NumDocumento = value; }
+            get { return _NumeroDocumento; }
+            set { _NumeroDocumento = value; }
         }
-        public List<LineaTelefonica> LineaTelefonica
+        public String Documento
         {
-            get { return _LineaTelefonica; }
-            set { _LineaTelefonica = value; }
+            get { return _Documento; }
+            set { _Documento = value; }
         }
-        public List<Cliente> Cliente
+        public String FechaEvaluacion
         {
-            get { return _Cliente; }
-            set { _Cliente = value; }
-        }
-        public List<Plan> Plan
-        {
-            get { return _Plan; }
-            set { _Plan = value; }
+            get { return _FechaEvaluacion; }
+            set { _FechaEvaluacion = value; }
         }
     }
 }

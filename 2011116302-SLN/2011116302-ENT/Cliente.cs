@@ -9,73 +9,70 @@ namespace _2011116302_ENT
     public class Cliente
     {
         public int ClienteId { get; set; }
-
-        int _codigoClie;
-        String _nombreClie;
-        String _apePaternoClie;
-        String _apeMaternoClie;
-        String _dniClie;
-        String _fecNacimientoClie;
-        Double _sueldoClie;
-        String _correoClie;
-        String _direccionClie;
-
-        public Cliente(int codigoCli, String nombreClie, String apePaternoClie, String apeMaternoClie, String dniClie, String fecNacimientoClie, Double sueldoClie, String correoClie, String direccionClie)
+        /*
+        public String NombreCliente { get; set; }
+        public String ApePaternoCliente { get; set; }
+        public String ApeMaternoCliente { get; set; }
+        public String DniCliente { get; set; }
+        public String FecNacimientoCliente { get; set; }
+        public Double SueldoCliente { get; set; }
+        public String CorreoCliente { get; set; }
+        */
+        String _NombreCliente;
+        String _ApePaternoCliente;
+        String _ApeMaternoCliente;
+        String _DniCliente;
+        String _FecNacimientoCliente;
+        Double _SueldoCliente;
+        String _CorreoCliente;
+        public Cliente()
         {
-            _codigoClie = codigoCli;
-            _nombreClie = nombreClie;
-            _apePaternoClie = apePaternoClie;
-            _apeMaternoClie = apeMaternoClie;
-            _dniClie = dniClie;
-            _fecNacimientoClie = fecNacimientoClie;
-            _sueldoClie = sueldoClie;
-            _correoClie = correoClie;
-            _direccionClie = direccionClie;
+
         }
-        public int CodigoCliente
+        public Cliente(String nombreCliente, String apePaternoCliente, String apeMaternoCliente, String dniCliente, String fecNacimientoCliente, Double sueldoCliente, String correoCliente)
         {
-            get { return _codigoClie; }
-            set { _codigoClie = value; }
+            _NombreCliente = nombreCliente;
+            ApeMaternoCliente = apePaternoCliente;
+            ApeMaternoCliente = apeMaternoCliente;
+            DniCliente = dniCliente;
+            FecNacimientoCliente = fecNacimientoCliente;
+            SueldoCliente = sueldoCliente;
+            CorreoCliente = correoCliente;
         }
         public String NombreCliente
         {
-            get { return _nombreClie; }
-            set { _nombreClie = value; }
+            get { return _NombreCliente; }
+            set { _NombreCliente = value; }
         }
         public String ApePaternoCliente
         {
-            get { return _apePaternoClie; }
-            set { _apePaternoClie = value; }
+            get { return _ApePaternoCliente; }
+            set { _ApePaternoCliente = value; }
         }
         public String ApeMaternoCliente
         {
-            get { return _apeMaternoClie; }
-            set { _apeMaternoClie = value; }
+            get { return _ApeMaternoCliente; }
+            set { _ApeMaternoCliente = value; }
         }
-        public String DNICliente
+        public String DniCliente
         {
-            get { return _dniClie; }
-            set { _dniClie = value; }
+            get { return _DniCliente; }
+            set { _DniCliente = value; }
         }
         public String FecNacimientoCliente
         {
-            get { return _fecNacimientoClie; }
-            set { _fecNacimientoClie = value; }
+            get { return _FecNacimientoCliente; }
+            set { _FecNacimientoCliente = value; }
         }
         public Double SueldoCliente
         {
-            get { return _sueldoClie; }
-            set { _sueldoClie = value; }
+            get { return _SueldoCliente; }
+            set { _SueldoCliente = value; }
         }
         public String CorreoCliente
         {
-            get { return _correoClie; }
-            set { _correoClie = value; }
-        }
-        public String DireccionCliente
-        {
-            get { return _direccionClie; }
-            set { _direccionClie = value; }
+            get { return _CorreoCliente; }
+            set { _CorreoCliente = value; }
         }
     }
 }

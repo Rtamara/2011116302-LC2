@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2011116302_ENT.Enumerables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,41 +11,42 @@ namespace _2011116302_ENT
     {
         public int TrabajadorId { get; set; }
 
-        int _codTrabajador;
-        String _nomTrabajador;
-        String _apePaTrabajador;
-        String _apMaTrabajador;
+        String _nombreTrabajador;
+        String _apePaternoTrabajador;
+        String _apMaternoTrabajador;
+        String _dniTrabajador;
 
-        private List<TipoTrabajador> _TipoTrabajador;
-        public Trabajador(int codTrabajador, String nomTrabajador, String apePaTrabajador, String apMaTrabajador, int numTipoTrabajador)
+        public TipoTrabajador TipoTrabajador { get; set; }
+        public Trabajador()
         {
-            _codTrabajador = codTrabajador;
-            _nomTrabajador = nomTrabajador;
-            _apePaTrabajador = apePaTrabajador;
-            _apMaTrabajador = apMaTrabajador;
-
-            _TipoTrabajador = new List<TipoTrabajador>(numTipoTrabajador);
+            TipoTrabajador = new TipoTrabajador();
         }
-        public int CodigoTrabajador
+        public Trabajador(String nombreTrabajador, String apellidoPaTrabajador, String apMaternoTrabajador, String dniTrabajador)
         {
-            get { return _codTrabajador; }
-            set { _codTrabajador = value; }
+            NombreTrabajador = nombreTrabajador;
+            ApellidoPaTrabajador = apellidoPaTrabajador;
+            ApellidoMaTrabajador = apMaternoTrabajador;
+            DniTrabajador = dniTrabajador;
         }
         public String NombreTrabajador
         {
-            get { return _nomTrabajador; }
-            set { _nomTrabajador = value; }
+            get { return _nombreTrabajador; }
+            set { _nombreTrabajador = value; }
         }
         public String ApellidoPaTrabajador
         {
-            get { return _apePaTrabajador; }
-            set { _apePaTrabajador = value; }
+            get { return _apePaternoTrabajador; }
+            set { _apePaternoTrabajador = value; }
         }
         public String ApellidoMaTrabajador
         {
-            get { return _apMaTrabajador; }
-            set { _apMaTrabajador = value; }
+            get { return _apMaternoTrabajador; }
+            set { _apMaternoTrabajador = value; }
         }
-        public int NumtipoTrabajador { get; set; }
+        public String DniTrabajador
+        {
+            get { return _dniTrabajador; }
+            set { _dniTrabajador = value; }
+        }
     }
 }

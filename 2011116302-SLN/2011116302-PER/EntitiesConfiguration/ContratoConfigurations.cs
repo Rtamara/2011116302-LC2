@@ -1,6 +1,7 @@
 ﻿using _2011116302_ENT;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,14 @@ namespace _2011116302_PER.EntitiesConfiguration
         {
             ToTable("Contrato");
             HasKey(ct => ct.ContratoId);
+
+            Property(ct => ct.NumeroContrato).HasColumnType("int");
+            Property(ct => ct.PlazoContrato).HasMaxLength(20).HasColumnType("Varchar");
+            Property(ct => ct.FormaContrato).HasMaxLength(20).HasColumnType("Varchar");
+
+            Property(ct => ct.ContratoId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
         }
     }
 }

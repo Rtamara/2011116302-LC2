@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A518275-9B44-4BC4-8639-08457359E3D0}</ProjectGuid>
+    <ProjectGuid>{3AD04177-EE85-411E-9FDF-9E4BE1128A0B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_2011116302_ENT</RootNamespace>
@@ -31,25 +31,53 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministradorEquipo.cs" />
-    <Compile Include="AdministradorLinea.cs" />
-    <Compile Include="CentroAtencion.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Contrato.cs" />
-    <Compile Include="Departamento.cs" />
-    <Compile Include="Direccion.cs" />
-    <Compile Include="Distrito.cs" />
-    <Compile Include="EquipoCelular.cs" />
-    <Compile Include="EstadoEvaluacion.cs" />
-    <Compile Include="Evaluacion.cs" />
+    <Compile Include="EntityesDTO\AdministradorEquipoDTO.cs" />
+    <Compile Include="EntityesDTO\AdministradorLineaDTO.cs" />
+    <Compile Include="EntityesDTO\CentroAtencionDTO.cs" />
+    <Compile Include="EntityesDTO\ClienteDTO.cs" />
+    <Compile Include="EntityesDTO\ContratoDTO.cs" />
+    <Compile Include="EntityesDTO\DepartamentoDTO.cs" />
+    <Compile Include="EntityesDTO\DistritoDTO.cs" />
+    <Compile Include="EntityesDTO\EquipoCelularDTO.cs" />
+    <Compile Include="EntityesDTO\EvaluacionDTO.cs" />
+    <Compile Include="EntityesDTO\LineaTelefonicaDTO.cs" />
+    <Compile Include="EntityesDTO\ProvinciaDTO.cs" />
+    <Compile Include="EntityesDTO\TrabajadorDTO.cs" />
+    <Compile Include="EntityesDTO\UbigeoDTO.cs" />
+    <Compile Include="EntityesDTO\VentaDTO.cs" />
+    <Compile Include="Entityes\AdministradorEquipo.cs" />
+    <Compile Include="Entityes\AdministradorLinea.cs" />
+    <Compile Include="Entityes\CentroAtencion.cs" />
+    <Compile Include="Entityes\Cliente.cs" />
+    <Compile Include="Entityes\Contrato.cs" />
+    <Compile Include="Entityes\Departamento.cs" />
+    <Compile Include="Entityes\Direccion.cs" />
+    <Compile Include="Entityes\Distrito.cs" />
+    <Compile Include="Entityes\EquipoCelular.cs" />
+    <Compile Include="Entityes\Evaluacion.cs" />
+    <Compile Include="Entityes\LineaTelefonica.cs" />
+    <Compile Include="Entityes\Plan.cs" />
+    <Compile Include="Entityes\Provincia.cs" />
+    <Compile Include="Entityes\Trabajador.cs" />
+    <Compile Include="Entityes\Ubigeo.cs" />
+    <Compile Include="Entityes\Venta.cs" />
+    <Compile Include="Enumerables\EstadoEvaluacion.cs" />
+    <Compile Include="Enumerables\EstadoLinea.cs" />
+    <Compile Include="Enumerables\TipoEvaluacion.cs" />
+    <Compile Include="Enumerables\TipoLinea.cs" />
+    <Compile Include="Enumerables\TipoPago.cs" />
+    <Compile Include="Enumerables\TipoPlan.cs" />
+    <Compile Include="Enumerables\TipoTrabajador.cs" />
     <Compile Include="IRepositories\IAdministradorEquipoRepository.cs" />
     <Compile Include="IRepositories\IAdministradorLineaRepository.cs" />
     <Compile Include="IRepositories\ICentroAtencionRepository.cs" />
@@ -59,39 +87,20 @@
     <Compile Include="IRepositories\IDireccionRepository.cs" />
     <Compile Include="IRepositories\IDistritoRepository.cs" />
     <Compile Include="IRepositories\IEquipoCelularRepository.cs" />
-    <Compile Include="IRepositories\IEstadoEvaluacionRepository.cs" />
     <Compile Include="IRepositories\IEvaluacionRepository.cs" />
     <Compile Include="IRepositories\ILineaTelefonicaRepository.cs" />
-    <Compile Include="IRepositories\ITipoPlanRepository.cs" />
     <Compile Include="IRepositories\IPlanRepository.cs" />
     <Compile Include="IRepositories\IProvinciaRepository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
-    <Compile Include="IRepositories\ITipoEvaluacionRepository.cs" />
-    <Compile Include="IRepositories\ITipoLineaRepository.cs" />
-    <Compile Include="IRepositories\ITipoPagoRepository.cs" />
-    <Compile Include="IRepositories\ITipoTrabajadorRepository.cs" />
     <Compile Include="IRepositories\ITrabajadorRepository.cs" />
     <Compile Include="IRepositories\IUbigeoRepository.cs" />
+    <Compile Include="IRepositories\IUnityOfWork.cs" />
     <Compile Include="IRepositories\IVentaRepository.cs" />
-    <Compile Include="LineaTelefonica.cs" />
-    <Compile Include="Plan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provincia.cs" />
-    <Compile Include="TipoEvaluacion.cs" />
-    <Compile Include="TipoLinea.cs" />
-    <Compile Include="TipoPago.cs" />
-    <Compile Include="TipoPlan.cs" />
-    <Compile Include="TipoTrabajador.cs" />
-    <Compile Include="Trabajador.cs" />
-    <Compile Include="Ubigeo.cs" />
-    <Compile Include="Venta.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -11,27 +11,33 @@ namespace _2011116302_ENT
         public int ContratoId { get; set; }
 
         int _NumeroContrato;
-        String _Plazo;
+        String _PlazoContrato;
         String _FormaContrato;
         public int NumeroContrato
         {
             get { return _NumeroContrato; }
             set { _NumeroContrato = value; }
         }
-        public String Plazo
+        public String PlazoContrato
         {
-            get { return _Plazo; }
-            set { _Plazo = value; }
+            get { return _PlazoContrato; }
+            set { _PlazoContrato = value; }
         }
         public String FormaContrato
         {
             get { return _FormaContrato; }
             set { _FormaContrato = value; }
         }
-        public Contrato(int numContrato, String plazo, String formaContrato)
+        public Venta Venta { get; set; }
+        public int VentaId { get; set; }
+        public Contrato()
         {
-            NumeroContrato = numContrato;
-            Plazo = plazo;
+            Venta = new Venta();
+        }
+        public Contrato(int numeroContrato, String plazoContrato, String formaContrato)
+        {
+            NumeroContrato = numeroContrato;
+            PlazoContrato = plazoContrato;
             FormaContrato = formaContrato;
         }
     }

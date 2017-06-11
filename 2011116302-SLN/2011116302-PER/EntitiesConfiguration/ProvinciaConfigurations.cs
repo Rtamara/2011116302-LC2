@@ -1,6 +1,7 @@
 ﻿using _2011116302_ENT;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,16 @@ namespace _2011116302_PER.EntitiesConfiguration
         {
             ToTable("Provincia");
             HasKey(pv => pv.ProvinciaId);
+
+            Property(pv => pv.NombreProvincia).HasMaxLength(2).HasColumnType("Varchar");
+            Property(pv => pv.NombreProvincia)
+                .HasMaxLength(60)
+                .HasColumnType("Varchar");
+
+            Property(pv => pv.ProvinciaId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            //HasRequired(dp => dp.Departamento).WithMany(pv => pv.Provincia);//.HasForeignKey(pv => pv.DepartamentoId);
         }
     }
 }

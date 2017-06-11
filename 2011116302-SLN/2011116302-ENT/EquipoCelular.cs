@@ -10,58 +10,57 @@ namespace _2011116302_ENT
     {
         public int EquipoCelularId { get; set; }
 
-        int _CodigoCelular;
-        String _Marca;
-        String _Modelo;
+        String _MarcaEquipo;
+        String _ModeloEquipo;
         String _Imei;
-        String _Color;
+        String _ColorEquipo;
         Double _Precio;
-        int _Stock;
-        public EquipoCelular(int codigoCelular, String marca, String modelo, String imei, String color, Double precio, int stock)
+        int _Cantidad;
+
+        public AdministradorEquipo AdministradorEquipo { get; set; }
+        public int AdministradorEquipoId { get; set; }
+        public EquipoCelular()
         {
-            CodigoCelular = codigoCelular;
-            Marca = marca;
-            Modelo = modelo;
-            Modelo = modelo;
+            AdministradorEquipo = new AdministradorEquipo();
+        }
+        public EquipoCelular(String marca, String modelo, String imei, String color, Double precio, int cantidad)
+        {
+            MarcaEquipo = marca;
+            ModeloEquipo = modelo;
             Imei = imei;
-            Color = color;
-            Precio = precio;
-            Stock = stock;
+            ColorEquipo = color;
+            PrecioEquipo = precio;
+            CantidadEquipo = cantidad;
         }
-        public int CodigoCelular
+        public String MarcaEquipo
         {
-            get { return _CodigoCelular; }
-            set { _CodigoCelular = value; }
+            get { return _MarcaEquipo; }
+            set { _MarcaEquipo = value; }
         }
-        public String Marca
+        public String ModeloEquipo
         {
-            get { return _Marca; }
-            set { _Marca = value; }
-        }
-        public String Modelo
-        {
-            get { return _Modelo; }
-            set { _Modelo = value; }
+            get { return _ModeloEquipo; }
+            set { _ModeloEquipo = value; }
         }
         public String Imei
         {
             get { return _Imei; }
             set { _Imei = value; }
         }
-        public String Color
+        public String ColorEquipo
         {
-            get { return _Color; }
-            set { _Color = value; }
+            get { return _ColorEquipo; }
+            set { _ColorEquipo = value; }
         }
-        public Double Precio
+        public Double PrecioEquipo
         {
             get { return _Precio; }
             set { _Precio = value; }
         }
-        public int Stock
+        public int CantidadEquipo
         {
-            get { return _Stock; }
-            set { _Stock = value; }
+            get { return _Cantidad; }
+            set { _Cantidad = value; }
         }
     }
 }

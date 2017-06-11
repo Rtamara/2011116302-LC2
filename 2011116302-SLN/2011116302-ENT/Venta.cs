@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2011116302_ENT.Enumerables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,55 +11,54 @@ namespace _2011116302_ENT
     {
         public int VentaId { get; set; }
 
-        int _codVenta;
-        String _modalidad;
-        String _fechaVanta;
-        Double _montoTotal;
+        int _NumeroVenta;
+        String _ModalidadVenta;
+        String _FechaVenta;
+        Double _MontoVenta;
 
-        private List<LineaTelefonica> _LineaTelefonica;
-        private List<Contrato> _Contrato;
-        private List<Evaluacion> _Evaluacion;
-        private List<Cliente> _Cliente;
-        private TipoPago _TipoPago;
+        public Evaluacion Evaluacion { get; set; }
+        public int EvaluacionId { get; set; }
+        public Cliente Cliente { get; set; }
+        public int ClienteId { get; set; }
+        public LineaTelefonica LineaTelefonica { get; set; }
+        public int LineaTelefonicaId { get; set; }
+        public TipoPago TipoPago { get; set; }
+        public CentroAtencion CentroAtencion { get; set; }
+        public int CentroAtencionId { get; set; }
         public Venta()
         {
-            _LineaTelefonica = new List<LineaTelefonica>();
-            _Contrato = new List<Contrato>();
-            _Evaluacion = new List<Evaluacion>();
-            _Cliente = new List<Cliente>();
+            LineaTelefonica = new LineaTelefonica();
+            Evaluacion = new Evaluacion();
+            TipoPago = new TipoPago();
         }
-        public Venta(int codVenta, String modalidad, String fechaVanta, Double montoTotal, TipoPago tipoPago)
+        public Venta(int numeroVenta, String modalidadVenta, String fechaVenta, Double montoVenta, Cliente cliente, CentroAtencion centroAtencion)
         {
-            CodigoVenta = codVenta;
-            Modalidad = modalidad;
-            FechaVanta = fechaVanta;
-            MontoTotal = montoTotal;
-            TiposPagos = tipoPago;
+            NumeroVenta = numeroVenta;
+            ModalidadVenta = modalidadVenta;
+            FechaVenta = fechaVenta;
+            MontoVenta = montoVenta;
+            Cliente = cliente;
+            CentroAtencion = centroAtencion;
         }
-        public int CodigoVenta
+        public int NumeroVenta
         {
-            get { return _codVenta; }
-            set { _codVenta = value; }
+            get { return _NumeroVenta; }
+            set { _NumeroVenta = value; }
         }
-        public String Modalidad
+        public String ModalidadVenta
         {
-            get { return _modalidad; }
-            set { _modalidad = value; }
+            get { return _ModalidadVenta; }
+            set { _ModalidadVenta = value; }
         }
-        public String FechaVanta
+        public String FechaVenta
         {
-            get { return _fechaVanta; }
-            set { _fechaVanta = value; }
+            get { return _FechaVenta; }
+            set { _FechaVenta = value; }
         }
-        public Double MontoTotal
+        public Double MontoVenta
         {
-            get { return _montoTotal; }
-            set { _montoTotal = value; }
-        }
-        public TipoPago TiposPagos
-        {
-            get { return _TipoPago; }
-            set { _TipoPago = value; }
+            get { return _MontoVenta; }
+            set { _MontoVenta = value; }
         }
     }
 }
